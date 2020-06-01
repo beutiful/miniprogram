@@ -1,0 +1,68 @@
+<!--pages/news.wxml-->
+<!--兼职招新-->
+<!--搜索栏-->
+<view class="submit">
+  <form bindsubmit="formSubmit">
+    <input name="search" class="inputimg" placeholder="兼职招新"></input>
+    <view class="icon"><icon type="search" size="40rpx"></icon>
+    <button form-type="submit" size="mini" plain="true">btn</button></view>
+  </form>
+</view>
+<!--动图系列-->
+<view class="head">
+  <image src="https://img.zcool.cn/community/01a39b57de3ec00000012e7e10afee.gif"></image>
+  <view class="message">
+    <view>嘉大兼职招新 </view>
+    <view>话题 {{length}}</view>
+  </view>
+</view>
+<!--隔离模块-->
+<view class="viewblock"></view>
+<!--兼职招新话题-->
+<view class="employ"  wx:for="{{showData}}" wx:for-item="item" wx:for-index="index" wx:key="*this">
+  <!-- 个人信息-->
+  <view class="content" bindtap="drop" data-index="{{index}}"> 
+    <view class="contenthead">
+      <image src="{{item.school_user_info_avatarUrl}}"></image>
+      <text>{{item.school_user_info_nickname}}</text>
+    </view>
+    <!-- 信息详情-->
+    <view class="body">
+      <view class="title">
+        {{item.school_employ_title}}
+      </view>
+      <view class="msg">
+        {{item.school_employ_content}}
+      </view>
+      <view class="time">
+        <text>{{item.school_employ_time}}</text>
+      </view>
+    </view>
+  </view>
+  <!--评论区-->
+  <!--<view class="comment">
+    <text>HHH</text>:
+    <text>太对了太对了太对了太对了说的好说得好说的好哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</text>
+    <view class="all">查看全部评论</view>
+  </view>-->
+  <view class="tab">
+    <view class="share">
+      <button open-type="share" class='shareButton' size="mini">分享</button>
+      <image src="/assets/experience/share.png"></image>
+      <text>分享</text>
+    </view>
+    <view class="commenticon" bindtap="drop" data-index="{{index}}">
+      <image src="/assets/experience/comment.png"></image>
+      <text>{{responseLength[item.school_employ_id]}}</text>
+    </view>
+    <view class="seeCount" >
+      <image src="/assets/comment/people.png"></image>
+      <text>{{item.school_employ_people}}</text>
+    </view>
+    <view class="heart" bindtap="changeimg" data-id="{{item.school_employ_id}}">
+      <image wx:if="{{isShow[item.school_employ_id]}}" src="/assets/experience/afterheart.png"></image>
+      <image wx:else src="/assets/experience/heart3.png"></image>
+      <text>{{item.school_employ_likeNumber}}</text>
+    </view>
+  </view>
+</view>

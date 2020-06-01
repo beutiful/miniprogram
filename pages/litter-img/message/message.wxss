@@ -1,0 +1,18 @@
+/* pages/litter-img/message/message.wxss */
+.text textarea{
+  border: 4rpx solid #eeeaea;
+  margin:50rpx auto 30rpx auto;
+  padding: 20rpx;
+}
+.content image{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-size: 100% 100%;
+  z-index:-1;
+}
+.btn1{
+ margin-left: 50%;
+ margin-right: 10%;
+}
+

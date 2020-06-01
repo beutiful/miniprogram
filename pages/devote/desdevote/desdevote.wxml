@@ -1,0 +1,100 @@
+<!--pages/devote/desdevote/desdevote.wxml-->
+<view class="detail" style="margin-bottom:110rpx">
+  <view class="mask" hidden="{{maskFlag}}"></view>
+  <view class="head">
+    <image src="{{objData.school_user_info_avatarUrl}}"></image>
+    <text>{{objData.school_user_info_nickname}}</text>
+  </view>
+  <view class="content"> 
+    <view class="title">
+      {{objData.school_devote_title}}
+    </view>
+    <view class="message">
+      {{content}}
+    </view>
+    <view class="showImage"  wx:if="{{!objData.school_devote_path[0]==''}}">
+      <image wx:for="{{objData.school_devote_path}}" wx:for-item="item" data-index="{{index}}"
+      src="{{item}}" wx:key="*this" bindtap="previewImg"></image>
+    </view>
+  </view>
+  <view class="time">{{objData.school_devote_time}}</view>
+  <view class="viewblock"></view>
+  <!--文章数据区-->
+  <view class="cicon">
+      <text bindtap="isShowResponse">回复（{{responseLength}}）</text>
+      <text bindtap="getHeart">点赞（{{objData.school_devote_likeNumber}}）</text>
+      <image src="/assets/comment/watch.png"></image>
+      <text class="ctext">{{objData.school_devote_people}}</text>
+    </view>  
+  <!--隔离区-->
+  <view class="lineblock"></view>
+  <!--展示评论区-->
+  <view class="commentPosition"  wx:if="{{isShowResponse}}">
+    <view class="comment" wx:for="{{comments}}" wx:for-item="commentItem" data-index="{{index}}" wx:key="key"> 
+      <view class="commentHead">
+        <image src="{{commentItem.school_user_info_avatarUrl}}"></image>
+        <text>{{commentItem.school_comment_name}}</text>
+      </view>  
+      <view class="commentContent">
+        <view >{{commentItem.school_comment_content}}</view>
+        <view>
+          <text>{{commentItem.school_comment_time}}</text>
+          <image src="/assets/experience/comment.png" bindtap="addChildComment" data-commentId="{{commentItem.school_comment_id}}"></image>
+          <view class="end" wx:if="{{isShowComments[commentItem.school_comment_id]}}">
+            <form bindsubmit="childCommentformSubmit" data-replyId="{{commentItem.school_comment_id}}" data-mainId="{{commentItem.school_comment_id}}">
+              <input name="content" placeholder="请输入回复..."></input>
+              <button formType="submit" size="mini">发送</button>
+              <button formType="reset" size="mini" bindtap="noChildComment" data-commentId="{{commentItem.school_comment_id}}">取消</button>
+            </form>
+          </view>
+        </view>  
+      </view>
+      <view  class="reply">
+        <view class="openReoly" wx:if="{{!open[index]}}" bindtap="commentReply" data-Index="{{index}}">展开回复</view>
+        <view class="replyarea" wx:else>
+           <view class="comment" wx:for="{{commentItem.replys}}" wx:for-item="childCommentItem" data-index="{{index}}" wx:key="key">
+            <view class="replyHead">
+              <image src="{{childCommentItem.school_user_info_avatarUrl}}"></image>
+              <text>{{childCommentItem.school_comment_name}}</text>
+            </view> 
+            <view class="replyContent">
+              <view>
+                <text style="color:#3758ef;font-size:24rpx">@{{childCommentItem.school_reply_name}}</text>{{childCommentItem.school_comment_content}}</view>
+              <view>
+                <text>{{childCommentItem.school_comment_time}}</text>
+                <image src="/assets/experience/comment.png" bindtap="addChildReplyComment" data-commentId="{{childCommentItem.school_comment_id}}" data-mainId="{{commentItem.school_comment_id}}"></image>
+                <view class="end" wx:if="{{isShowChildComments[commentItem.school_comment_id][childCommentItem.school_comment_id]}}">
+                <form bindsubmit="childCommentformSubmit" data-replyId="{{childCommentItem.school_comment_id}}" data-mainId="{{commentItem.school_comment_id}}">
+                    <input name="content" placeholder="回复子评论..."></input>
+                    <button formType="submit" size="mini">发送</button>
+                    <button formType="reset" size="mini" bindtap="noChildReplyComment"  data-commentId="{{childCommentItem.school_comment_id}}" data-mainId="{{commentItem.school_comment_id}}">取消</button>
+                  </form>
+                </view>
+              </view>  
+            </view>
+          </view>
+        </view>
+        <view class="closeReply" wx:if="{{open[index]}}" bindtap="commentReply">收起回复</view>
+      </view>
+    </view>
+  </view>
+   <view class="commentHeart" wx:else>
+    <image  wx:if="{{heartImg}}" wx:for="{{heartImg}}" wx:for-item="item" data-index="{{index}}"
+      src="{{item}}" wx:key="*this"></image>
+  </view>
+  <!--底部评论区-->
+  <view class="speak">
+    <view class="heart" bindtap="changeimg" data-id="{{objData.school_devote_id}}">
+      <image wx:if="{{show}}" src="/assets/experience/afterheart.png"></image>
+      <image wx:else src="/assets/experience/heart3.png"></image>
+    </view>
+    <view class="text" bindtap="add">说说我的看法...</view>
+    <view class="end" wx:if="{{inputshow}}">
+      <form bindsubmit="formSubmit">
+        <input name="content" placeholder="说说我的看法..."></input>
+        <button formType="submit" size="mini">发送</button>
+        <button formType="reset" size="mini" bindtap="no">取消</button>
+      </form>
+    </view>
+  </view>
+</view>

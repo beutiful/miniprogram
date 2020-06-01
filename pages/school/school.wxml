@@ -1,0 +1,18 @@
+<!--pages/school/school.wxml-->
+<!--校园时事-->
+<view class="school" bindtap="drop" data-index="{{index}}" wx:for="{{showData}}" wx:for-item="item" wx:for-index="index" wx:key="*this">
+  <view class="title">
+    <view class="text">
+      {{item.school_news_title}}
+    </view>
+  <view class="content">
+    <text>{{item.school_user_info_nickname}}</text>
+    <text>{{item.school_news_date}}</text>
+  </view>
+  </view>
+  <view class="image" hidden="{{item.school_news_path == ''}}">
+    <image src="{{item.school_news_path[0]}}"></image>
+  </view>
+</view>
+
+<!--bindtap函数绑定参数： 可以在函数位置后面加以data-开头的单词。比如data-index="{{index}}"即向bindtap中传递参数-->

@@ -1,0 +1,76 @@
+/* pages/edit/edit.wxss */
+/*文章标题*/
+.titles{
+  border-bottom: 2rpx solid #eee9e5;
+  height: 60rpx;
+  margin:30rpx 30rpx 20rpx 30rpx;
+}
+/*文章内容*/
+.content{
+  margin: 20rpx 30rpx;
+  font-size: 26rpx;
+
+}
+.content textarea{
+  width: 100%;
+  height:500rpx;
+  letter-spacing: 4rpx;
+  line-height: 4rpx;
+  margin-bottom:20rpx;
+}
+.content image{
+  height: 160rpx;
+  width: 160rpx;
+  margin-bottom: 10rpx;
+  position: relative;
+}
+/*删除图片*/
+.imgList{
+  position: relative;
+}
+.imgList icon{
+  position: absolute;
+  top:0;
+  right: 0;
+}
+/*隔离区*/
+.pass{
+  width: 100%;
+  height: 18rpx;
+  background-color: #f4f2f0;
+}
+/*分类区*/
+.style{
+  margin:20rpx 30rpx;
+}
+.style image{
+  height:46rpx;
+  width: 46rpx;
+  margin-right: 14rpx;
+}
+.img{
+  margin-bottom: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.select{
+  margin: 4rpx 20rpx;
+}
+.picker-text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60rpx;
+  width: 300rpx;
+  background-color: #eeeae7;
+  font-family: KaiTi;
+  border-radius: 10rpx;
+}
+/*发送区*/
+.submit{
+  height: 200rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "MainImage":"./childCpn/image/MainImage",
+    "icon":"./childCpn/icon/icon"
+  },
+  "navigationBarTitleText": "嘉大生活馆",
+  "navigationBarBackgroundColor":"#8BD5FE"
+}

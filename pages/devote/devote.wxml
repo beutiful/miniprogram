@@ -1,0 +1,48 @@
+<!--pages/devote/devote.wxml-->
+<view class="img">
+  <view class="notice"></view>
+  <image src="/assets/edit/heart1.jpg"></image>
+</view>
+<view class="viewblock"></view>
+<view class="devote" wx:for="{{showData}}" wx:for-item="item" wx:for-index="index" wx:key="*this">
+  <view class="content" bindtap="drop" data-index="{{index}}" > 
+    <view class="head">
+      <image src="{{item.school_user_info_avatarUrl}}"></image>
+      <text>{{item.school_user_info_nickname}}</text>
+    </view>
+    <view class="body">
+      <view class="title">
+        {{item.school_devote_title}}
+      </view>
+      <view class="msg">
+        {{item.school_devote_content}}
+      </view>
+      <view class="time">{{item.school_devote_time}}</view>
+    </view>
+  </view>
+  <!--<view class="comment">
+    <text>HHH</text>:
+    <text>太对了太对了太对了太对了说的好说得好说的好哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</text>
+    <view class="all">查看全部评论</view>
+  </view>-->
+  <view class="tab">
+    <view class="share">
+      <button open-type="share" class='shareButton' size="mini">分享</button>
+      <image src="/assets/experience/share.png"></image>
+      <text>分享</text>
+    </view>
+    <view class="commenticon" bindtap="drop" data-index="{{index}}">
+      <image src="/assets/experience/comment.png"></image>
+      <text>{{responseLength[item.school_devote_id]}}</text>
+    </view>
+    <view class="seeCount" >
+      <image src="/assets/comment/people.png"></image>
+      <text>{{item.school_devote_people}}</text>
+    </view>
+    <view class="heart" bindtap="changeimg" data-id="{{item.school_devote_id}}">
+      <image wx:if="{{isShow[item.school_devote_id]}}" src="/assets/experience/afterheart.png"></image>
+      <image wx:else src="/assets/experience/heart3.png"></image>
+      <text>{{item.school_devote_likeNumber}}</text>
+    </view>
+  </view>
+</view>

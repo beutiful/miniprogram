@@ -1,0 +1,21 @@
+<!--components/comment/comment.wxml-->
+<!--<view class="comment" wx:for="{{comments}}" wx:for-item="commentItem" data-index="{{index}}" wx:key="comkey"> 
+  <view class="commentHead">
+    <image src="{{commentItem.school_user_info_avatarUrl}}"></image>
+    <text>{{commentItem.school_comment_name}}</text>
+  </view>  
+  <view class="commentContent">
+    <view >{{commentItem.school_comment_content}}</view>
+    <view>
+      <text>{{commentItem.school_comment_time}}</text>
+      <image src="/assets/experience/comment.png" bindtap="add" data-commentId="commentItem.school_comment_id"></image>
+      <view class="end" wx:if="{{inputshow}}">
+        <form bindsubmit="commentSubmit">
+          <input name="comment" placeholder="说说我的看法..."></input>
+          <button formType="submit" size="mini">发送</button>
+          <button formType="reset" size="mini" bindtap="no">取消</button>
+        </form>
+      </view>
+    </view>  
+  </view>
+</view>-->

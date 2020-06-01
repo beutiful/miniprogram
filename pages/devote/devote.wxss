@@ -1,0 +1,108 @@
+/* pages/devote/devote.wxss */
+/*消息模块的展示*/
+.devote{
+  margin:30rpx 30rpx;
+  border-bottom: 2rpx solid #e2dddd;
+}
+/*图片*/
+.img{
+  display: flex;
+  justify-content: center;
+  margin:30rpx 30rpx 20rpx 30rpx;
+}
+.img image{
+  height: 300rpx;
+  width: 300rpx;
+}
+/*隔离区*/
+.viewblock{
+  height: 16rpx;
+  width: 100%;
+  background-color:#F55858;
+}
+.devote{
+  margin:20rpx 30rpx;
+}
+.head{
+  display: flex;
+  align-items: center;
+  margin: 30rpx 0 18rpx 0;
+}
+.head image{
+  height: 60rpx;
+  width: 60rpx;
+  border-radius: 50%;
+}
+.head text{
+  padding-left: 5%;
+}
+.body{
+  margin-bottom: 20rpx;
+}
+.title{
+  font-size: 32rpx;
+  letter-spacing: 2rpx;
+  font-weight: 600;
+}
+.msg{
+  font-size: 28rpx;
+  height: 80rpx;
+  overflow: hidden;
+  margin-bottom: 14rpx;
+  white-space: pre-line;
+}
+.time{
+  font-size: 24rpx;
+  height: 44rpx;
+}
+/*.comment{                            /*评论区设置
+  padding: 10rpx 10rpx;
+  font-size: 26rpx;
+  background-color: #f4f2f2;
+}*/
+/*.all{                                  /*查看评论  样式
+  font-size: 20rpx;
+  padding: 18rpx 0 4rpx 0;
+}*/
+.tab{                                   /**实现tab一行显示*/
+  display: flex;
+  flex-wrap: nowrap;
+  font-size: 22rpx;
+  margin: 20rpx 0;
+}
+.share,.commenticon,.heart,.seeCount{             /*实现tab三款垂直居中*/
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.share,.commenticon,.seeCount{              /*两侧加上竖线*/
+  border-right: 2rpx solid #c5c3c3;
+}
+.share image{                           /*图片大小不相同，分别设置大小*/
+  height: 34rpx;
+  width: 34rpx;
+}
+.commenticon image{
+  height: 38rpx;
+  width: 38rpx;
+}
+.heart image{
+  height: 30rpx;
+  width: 36rpx;
+} 
+.seeCount image{
+  height: 32rpx;
+  width: 38rpx;
+}
+.tab text{                             /*设置图片与文字之间的间距*/
+  padding-left: 10rpx;
+}
+.share{
+  position: relative;
+}
+/*分享按钮*/
+.shareButton{
+  position: absolute;
+  opacity: 0;
+}

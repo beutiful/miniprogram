@@ -1,0 +1,40 @@
+<!--pages/search/search.wxml-->
+<view class="experience" wx:for="{{chooseData}}" wx:for-item="item" wx:for-index="index" wx:key="*this">
+  <view class="content" bindtap="drop" data-index="{{index}}"> 
+    <view class="head">
+      <image src="{{item.school_user_info_avatarUrl}}"></image>
+      <text>{{item.school_user_info_nickname}}</text>
+    </view>
+    <view class="body">
+      <view class="title">
+        {{item.school_experience_title}}
+      </view>
+      <view class="msg">
+        {{item.school_experience_content}}
+      </view>
+      <view class="time">
+        <text>{{item.school_experience_time}}</text>
+        <view class="type">{{item.school_experience_type}}</view>
+      </view>  
+    </view>
+  </view>
+  <view class="tab">
+    <view class="share">
+      <image src="/assets/experience/share.png"></image>
+      <text>分享</text>
+    </view>
+    <view class="commenticon" bindtap="drop" data-index="{{index}}">
+      <image src="/assets/experience/comment.png"></image>
+      <text>2</text>
+    </view>
+    <view class="seeCount" >
+      <image src="/assets/comment/people.png"></image>
+      <text>{{item.school_experience_people}}</text>
+    </view>
+    <view class="heart" bindtap="changeimg" data-id="{{item.school_experience_id}}">
+      <image wx:if="{{isShow[item.school_experience_id]}}" src="/assets/experience/afterheart.png"></image>
+      <image wx:else src="/assets/experience/heart3.png"></image>
+      <text>{{item.school_experience_likeNumber}}</text>
+    </view>
+  </view>
+</view>

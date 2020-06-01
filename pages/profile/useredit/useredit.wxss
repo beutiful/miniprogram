@@ -1,0 +1,53 @@
+/* pages/useredit/useredit.wxss */
+.type{
+  display: flex;
+  height: 100rpx;
+  justify-content: flex-start;
+  border-bottom: 2rpx solid #eee9e5;
+  align-items: center;
+  padding-left: 60rpx;
+}
+.radio{
+  align-items: center;
+  transform:scale(0.8); 
+}
+radio .wx-radio-input.wx-radio-input-checked{
+  border-color: #FEBFB6;
+  background: #FEBFB6;
+}
+.text{
+  align-items: center;
+  line-height: 40rpx;
+  letter-spacing:4rpx;
+  padding-right: 50rpx;
+}
+.input,.auto{
+  line-height: 40rpx;
+  letter-spacing:4rpx;
+  font-family: MicrosoftYaHei;
+  padding: 30rpx 0 10rpx 60rpx;
+  height: 60rpx;
+  border-bottom: 2rpx solid #eee9e5;
+  width: 100%;
+}
+.k-input{
+  width: 60%;
+  display:inline-block ;
+}
+.sex{
+  display: inline;
+  margin-left: 32rpx;
+}
+.name{
+  display: flex;
+  align-items: center;
+}
+.save{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+.save button{
+  background-color:#FEBFB6;
+  color:#ffffff;
+}

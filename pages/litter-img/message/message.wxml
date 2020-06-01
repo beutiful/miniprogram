@@ -1,0 +1,13 @@
+<!--pages/litter-img/message/message.wxml-->
+<!--反馈-->
+  <view class="content">
+     <image src="/assets/edit/more.jpg" >
+     </image>
+     <view class="text">
+      <form bindsubmit="formSubmit">
+         <textarea name="content" placeholder="留下您想对我们说的话吧..." maxlength="-1" value="{{info}}"></textarea>
+         <button class="btn1" size="mini" form-type="submit">发送</button>
+         <button class="btn2" size="mini" form-type="reset">重置</button>
+        </form>
+     </view>
+  </view>

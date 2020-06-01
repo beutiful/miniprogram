@@ -1,0 +1,9 @@
+/* pages/main/image/MainImage.wxss */
+.main-image{
+  box-shadow: 0 -4px 1px rgba;
+  margin-bottom: 10rpx;
+}
+.item-image image{
+  height: 100%;
+  width: 100%;
+}

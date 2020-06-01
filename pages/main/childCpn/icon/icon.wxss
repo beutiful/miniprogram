@@ -1,0 +1,16 @@
+/* pages/main/childCpn/icon/icon.wxss */
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cpn image{
+  height: 160rpx;
+  width: 160rpx;
+  margin: 40rpx;
+}
+.text{
+  text-align: center;
+  font-size: 30rpx;
+  margin-bottom: 50rpx;
+}

@@ -1,0 +1,15 @@
+<!--pages/main.wxml-->
+<MainImage></MainImage>
+
+<view class="introduce"></view>
+
+<icon bind:cschool="cSchoolListener"></icon>
+
+<view class="edit">
+  <view class="image1" bindtap="edit">
+    <image src="/assets/edit/edit.png"></image></view>
+  <view class="image2" bindtap="leavemessage">
+    <image src="/assets/edit/contact.png"></image>
+  </view>
+</view>
+

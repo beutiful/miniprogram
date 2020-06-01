@@ -1,0 +1,34 @@
+<!--pages/edit/edit.wxml-->
+<!--编辑-->
+<view class="all">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="style">
+      <view class="img">
+        <image name="picture" src="/assets/edit/type.png"></image>
+        <text>选择分类</text>
+    </view>
+    <view class="select">
+      <picker name="type"  bindchange="bindpicker" value="{{multiIndex}}" range="{{array}}" class="picker-text" mode="multiSelector" bindcolumnchange="bindMultiPickerColumnChange">
+        <!--<view>{{array[index]}}</view> -->
+        <view>{{array[0][multiIndex[0]]}} {{array[1][multiIndex[1]]}}</view>
+      </picker>
+    </view >
+    </view>
+    <view  class="titles" wx:if="{{isShow}}">
+      <input name="title" placeholder="请输入标题"></input>
+    </view>
+    <view class="content">
+      <textarea name="content" placeholder="请输入内容..." maxlength="-1"></textarea>
+      <image src="/assets/edit/add.png" bindtap="selectImg"> </image>
+      <image class="imgList"  wx:for="{{imgPath}}"  wx:for-item="item" src="{{item}}" data-index="{{index}}" wx:key="*this" bindtap="previewImg">
+        <icon class="imgCancel" type="clear" size="25" data-index="{{index}}" catchtap="deleteImg"></icon>
+      </image>
+    </view>
+    <!--隔离区-->
+    <view class="pass"></view>
+    <view class="submit">
+       <button size="mini" formType="submit">保存</button>
+       <button size="mini" formType="reset">重置</button>
+    </view>
+  </form>
+</view>

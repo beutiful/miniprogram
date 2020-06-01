@@ -1,0 +1,31 @@
+<!--pages/main/childCpn/icon/icon.wxml-->
+<view class="container">
+  <view class="cpn" wx:for="{{items}}" wx:for-index="idx" wx:key='index'>
+   <image src="{{items[idx].image}}" bindtap="school" data-idx="{{idx}}"></image>
+   <view class="text" value="{{items[idx].value}}">{{items[idx].value}}</view>
+  </view>
+ <!-- <view class="cpn">
+   <image src="{{/assets/container/school.png}}"  bindtap="school"></image>
+   <view class="text" value="{{items[0]}}">{{items[0].value}}</view>
+  </view>
+  <view class="cpn">
+   <image src="/assets/container/jia.png"></image>
+   <view class="text">{{items[1].value}}</view>
+  </view>
+  <view class="cpn">
+   <image src="/assets/container/cart.png"></image>
+   <view class="text">{{items[2].value}}</view>
+  </view>
+  <view class="cpn">
+   <image src="/assets/container/devote.png"></image>
+   <view class="text">{{items[3].value}}</view>
+  </view>
+  <view class="cpn">
+   <image src="/assets/container/loose.png"></image>
+   <view class="text">{{items[4].value}}</view>
+  </view>
+  <view class="cpn">
+   <image src="/assets/container/news.png"></image>
+   <view class="text">{{items[5].value}}</view>
+  </view>-->
+</view>

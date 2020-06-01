@@ -1,0 +1,112 @@
+<!--pages/loose/Loose.wxml-->
+<!--失物招领-->
+<!--搜索栏-->
+<view class="submit">
+  <form bindsubmit="formSubmit">
+    <input name="search" class="inputimg"  placeholder="失物 / 招物"></input>
+    <view class="icon"><icon type="search" size="40rpx"></icon>
+    <button form-type="submit" size="mini" plain="true">btn</button></view>
+  </form>
+</view>
+<!--动图系列-->
+<view class="head">
+  <image src="https://hbimg.huabanimg.com/a3946e0c75774d79ea896a55ea104b3df05da27014329a-T8VPpX_fw658"></image>
+  <view class="message">
+    <view>嘉大寻宝馆 </view>
+    <view>话题 {{length}}</view>
+  </view>
+</view>
+<!--隔离模块-->
+<view class="viewblock"></view>
+<!-- 导航栏-->
+<view class="tag">
+  <text wx:for="{{nav}}" wx:for-item="item" wx:for-index="index" wx:key="*this" bindtap="change" data-index="{{item.id}}" class="{{currentIndex == item.id ? 'active' : ''}}">{{item.name}} </text>
+</view>
+<!--隔离模块-->
+<view class="viewblock"></view>
+<!--失物招领话题-->
+<view class="found"  wx:for="{{chooseData}}" wx:for-item="item" wx:for-index="index" wx:key="*this">
+  <!-- 个人信息-->
+  <view class="content" bindtap="drop" data-index="{{index}}"> 
+    <view class="contenthead">
+      <image src="{{item.school_user_info_avatarUrl}}"></image>
+      <text>{{item.school_user_info_nickname}}</text>
+    </view>
+    <!-- 信息详情-->
+    <view class="body">
+      <view class="title">
+        {{item.school_found_title}}
+      </view>
+      <view class="msg">
+        {{item.school_found_content}}
+      </view>
+      <view class="time">
+        <text>{{item.school_found_time}}</text>
+        <view class="type">{{item.school_found_type}}</view>
+      </view>
+    </view>
+  </view>
+  <!--评论区-->
+  <!--<view class="comment">
+    <text>HHH</text>:
+    <text>太对了太对了太对了太对了说的好说得好说的好哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</text>
+    <view class="all">查看全部评论</view>
+  </view>-->
+  <view class="tab">
+    <view class="share">
+      <button open-type="share" class='shareButton' size="mini">分享</button>
+      <image src="/assets/experience/share.png"></image>
+      <text>分享</text>
+    </view>
+    <view class="commenticon" bindtap="drop" data-index="{{index}}">
+      <image src="/assets/experience/comment.png"></image>
+      <text>{{responseLength[item.school_found_id]}}</text>
+    </view>
+    <view class="seeCount" >
+      <image src="/assets/comment/people.png"></image>
+      <text>{{item.school_found_people}}</text>
+    </view>
+    <view class="heart" bindtap="changeimg" data-id="{{item.school_found_id}}">
+      <image wx:if="{{isShow[item.school_found_id]}}" src="/assets/experience/afterheart.png"></image>
+      <image wx:else src="/assets/experience/heart3.png"></image>
+      <text>{{item.school_found_likeNumber}}</text>
+    </view>
+  </view>
+</view>
+
+
+
+<!--<view>
+  <view class="title">
+    <text class="one">失物</text>
+    <text>招物</text>
+  </view>
+  <view class="content">
+    <view class="people">
+      <image src="/assets/profile/headt.jpg"></image>
+      <view>沫上稻草</view>
+    </view>
+    <view class="substance"> 丢一卡通：161110239 南区或者锡科 </view>
+    <view class="images"><image src="/assets/image/no.png"></image></view> 
+    <view class="time">2019-1-12 18:10:38
+    <text class="cpn">失物</text>
+    </view>
+  </view>
+  <view class="comment">
+    <view class="share">
+      <image src="/assets/school/share.png"></image>
+      <text>分享</text>
+    </view>
+    <view class="line"></view>
+    <view class="repose">
+      <image src="/assets/school/repose.png"></image>
+      <text>回复</text>
+    </view>
+        <view class="line"></view>
+    <view class="see">
+      <image src="/assets/school/查看.png"></image>
+      <text>查看</text>
+    </view>
+  </view>
+</view>-->
+

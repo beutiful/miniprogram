@@ -1,0 +1,68 @@
+<!--pages/pro/pro.wxml-->
+<!--我的个人信息-->
+<!--<view>
+  <button open-type="getUserInfo"></button>
+</view>-->
+<view class="user">
+ <!-- <<image src='{{userInfo.avatarUrl}}' class="head"></image>-->
+  <open-data type="userAvatarUrl" class="head" bindtap="imgDetail"></open-data>
+  <view  class="user-message">
+   <!-- <view>{{userInfo.nickName}}</view>-->
+   <open-data type="userNickName"></open-data>
+    <view>
+      <text>学号 : </text>
+      <text>161110239</text>
+    </view>
+  </view>
+  <image src="/assets/profile/you.png" class="you" bindtap="edit" data-id="userInfo.school_user_id">
+  </image>
+</view>
+<!-- 隔离带-->
+<view class="viewblock"></view>
+<view class="model">
+  <view class="sent" bindtap="myedit">
+    <view class="img">
+      <image src="/assets/profile/sent.png"></image>
+    <!--<text wx:if="{{true}}" class="number">2</text>-->  
+    </view>
+    <view class="des">我的发布</view>
+  </view>
+  <!--我的回复区-->
+  <view class="same" bindtap="myresponse">
+    <view class="img">
+      <image src="/assets/profile/reply.png"></image>
+      <text wx:if="{{response}}" class="num">{{messageNumber}}</text>
+    </view>
+    <view class="des">我的回复</view>
+  </view>
+  <!--<view class="same">
+   <view class="img">
+      <image src="/assets/profile/notice.png"></image>
+      <text wx:if="{{true}}" class="num">2</text>
+    </view>
+    <view class="des">通知</view>
+  </view>-->
+</view>
+<!-- 隔离带-->
+<view class="viewblock"></view>
+<!--展示区-->
+<view class="myedit" wx:if="{{editShow}}" bindtap="myeditdetail" wx:for="{{myeditData}}" wx:key="key" wx:for-item="item" wx:for-index="index" data-type="{{item.promise.type}}" data-id="{{item.promise.school_id}}"  bindlongtap="deleteMyedit">
+  <view class="time">
+    <view class="date">{{time[index].time}}</view>
+    <view class="type">{{item.promise.type}}</view>
+  </view>
+  <view class="content">
+    <view>{{myeditData[index].promise.school_title}}</view>
+  </view>
+</view>
+<view class="myresponse" wx:if="{{responseShow}}">
+  <view class="myresponseItem" wx:for="{{showCommentData}}" wx:key="key" wx:for-item="item" wx:for-index="index" bindtap="myresponsDetail" data-type="{{item.type}}" data-id="{{item.school_id}}" bindlongtap="deleteMyreponse" data-commentId="{{item.school_comment_id}}">
+    <image src="{{item.school_user_info_avatarUrl}}"></image>
+    <view class="myresponsecontent">
+      <view class="myresponseName">{{item.school_user_info_nickname}}</view>
+      <view class="myresponseCt">{{item.school_comment_content}}</view>
+      <view class="myresponseTime">{{item.school_comment_time}}</view>
+    </view>
+    <view class="title">{{item.school_title}}</view>
+  </view>
+</view>

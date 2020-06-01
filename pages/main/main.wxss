@@ -1,0 +1,22 @@
+/* pages/main.wxss */
+
+.introduce{
+  height: 100rpx;
+  border-bottom: 8rpx solid #eee;
+}
+.edit{
+ position: fixed;
+ right: 50rpx;
+ bottom: 20rpx;
+}
+.image1{
+  margin-bottom: 24rpx;
+}
+.image1 image{
+  height: 60rpx;
+  width: 60rpx;
+}
+.image2 image{
+  height: 60rpx;
+  width: 60rpx;
+}

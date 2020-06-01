@@ -1,0 +1,157 @@
+/* pages/pro/pro.wxss */
+.user{
+  display: flex;
+  height: 200rpx;
+  justify-content: center;
+}
+.head{
+  height: 160rpx;
+  width: 160rpx;
+  border-radius: 50%;
+  margin: 30rpx 40rpx;
+}
+.you{
+  padding-top: 80rpx;
+  margin-right: 50rpx;
+  width: 70rpx;
+  height: 35rpx;
+}
+.user-message{
+  flex:1;
+  height: 100rpx;
+  align-items: center;
+  padding-top: 50rpx;
+  font-size: 32rpx;
+  line-height: 60rpx;
+}
+.model{
+  display: flex;
+}
+.sent, .same{
+  text-align: center;
+  flex:1;
+  margin-right:30rpx;
+}
+.sent image{
+  height: 80rpx;
+  width: 80rpx;
+}
+.same image{
+  height:60rpx;
+  width: 80rpx;
+}
+.same{
+  margin-top:10rpx;
+}
+.same>.des{
+  margin-top: 12rpx;
+}
+.des{
+  font-size: 28rpx;
+}
+.img{
+  position: relative;
+}
+.number{
+  position: absolute;
+  height:30rpx;
+  width: 30rpx;
+  border-radius: 50%;
+  background-color: red;
+  color: #ffffff;
+  display: block;
+  font-size: 22rpx;
+  text-align: center;
+  right:14%;
+  top:0;
+}
+.num{
+  position: absolute;
+  height:30rpx;
+  width: 30rpx;
+  border-radius: 50%;
+  background-color: red;
+  color: #ffffff;
+  display: block;
+  font-size: 22rpx;
+  text-align: center;
+  top:-16%;
+  right: 14%;
+}
+/*隔离带*/
+.viewblock{
+  margin:20rpx 0 20rpx 0;
+  height: 16rpx;
+  width: 100%;
+  background-color:#F6F6F6;
+}
+/*评论展示区*/
+.myedit{
+  margin:50rpx 30rpx 40rpx 30rpx;
+  display: flex;
+  height: 150rpx;
+}
+.time{
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+}
+.date{
+  font-size: 36rpx;
+  font-weight: 600;
+  margin-bottom: 20rpx;
+}
+.type{
+  font-size: 26rpx;
+}
+.content{
+  width: 65%;
+  display: inline-block;
+  margin-left: 40rpx;
+  height: auto;
+}
+.content view{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(235, 230, 230);
+  padding: 10rpx;
+}
+/*我的回复区*/
+.myresponseItem{
+  margin:30rpx 30rpx;
+  display: flex;
+  border-bottom: 2rpx solid rgb(235, 230, 230);
+}
+.myresponseItem image{
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+  margin-right:30rpx;
+}
+.myresponsecontent{
+  width: 55%;
+  display: inline-block;
+  padding-bottom: 10rpx;
+}
+.myresponsecontent view{
+  padding-bottom:10rpx;
+}
+.myresponseName{
+  color:rgb(179, 179, 179);
+  font-size: 26rpx;
+}
+.myresponseCt{
+  font-size: 24rpx;
+}
+.myresponseTime{
+  font-size: 20rpx;
+  color:rgb(173, 172, 172);
+}
+.title{
+  flex:1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26rpx;
+}

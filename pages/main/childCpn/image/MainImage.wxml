@@ -1,0 +1,9 @@
+<!--pages/main/image/MainImage.wxml-->
+<view class="main-image">
+  <swiper indicator-dots="{{true}}" circular indicator-active-color="#8BD5FE"
+          autoplay="{{true}}" interval="3000" duration="500" >
+    <block wx:for="{{Image}}" wx:key="index">
+      <swiper-item class="item-image"><image src="{{item}}" widthFix></image></swiper-item>
+    </block>
+  </swiper>
+</view>

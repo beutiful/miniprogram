@@ -1,0 +1,195 @@
+/* pages/profile/desmyedit/desmyedit.wxss */
+.head,.content,.comment,.cicon{
+  margin:20rpx 30rpx;
+}
+.head{
+  display: flex;
+  align-items: center;
+}
+.head image{
+  width:80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+/*昵称字体*/
+.head text{
+  font-size: 28rpx;
+}
+.title{
+  font-size: 32rpx;
+  letter-spacing: 2rpx;
+  margin: 20rpx 0 0 0;
+  font-weight: 600;
+}
+/*文章样式*/
+.message{
+  font-size: 28rpx;
+  white-space: pre-line;
+  margin-bottom: 14rpx;
+  margin-top: -10rpx;
+}
+.showImage image{
+  height: 200rpx;
+  width: 200rpx;
+}
+/*时间样式*/
+.time{
+   margin: 20rpx 30rpx;
+   font-size: 24rpx;
+}
+/*隔离区*/
+.viewblock{
+  margin:20rpx 0 10rpx 0;
+  height: 10rpx;
+  width: 100%;
+  background-color: rgb(231, 226, 227);
+}
+.cicon{
+  position: relative;
+  display: flex;
+  font-size: 24rpx;
+  letter-spacing: 2rpx;
+}
+.cicon text{
+  display: inline-block;
+  padding:10rpx 10rpx;
+  text-align: center;
+}
+.cicon image{
+  position: absolute;
+  right: 70rpx;
+  top:8rpx;
+  height: 40rpx;
+  width: 40rpx;
+}
+.ctext{
+  position: absolute;
+  right: 10rpx;
+}
+.lineblock{
+  height: 2rpx;
+  width: 100%;
+  background-color: #e4e3e3;
+}
+/*展示评论区*/
+.commentHead{
+  display: flex;
+  height: 70rpx;
+  align-items: center;
+  font-size: 24rpx;
+}
+.commentHead image{
+  height: 60rpx;
+  width: 60rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}
+.commentContent{
+  margin-left: 88rpx;
+  position: relative;
+  font-size: 28rpx;
+}
+.commentContent image,.replyContent image{
+  position: absolute;
+  height: 38rpx;
+  width: 38rpx;
+  right: 30rpx;
+}
+.commentContent text,.replyContent text{
+  font-size: 20rpx;
+}
+/*评论回复区*/
+.reply,.closeReply{
+  margin-top:20rpx;
+  margin-left:88rpx;
+  font-size: 24rpx;
+}
+.openReply,.closeReply{
+  font-size: 24rpx;
+  color:#bbbaba;
+}
+/*回复评论的头像样式*/
+.replyHead image{
+  height: 40rpx;
+  width: 40rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}
+.replyHead{
+  display: flex;
+  height: 50rpx;
+  align-items: center;
+  font-size: 24rpx;
+}
+.replyContent{
+  margin-left:72rpx;
+  position: relative;
+  font-size: 28rpx;
+}
+.closeReply{
+  margin-left: 88rpx;
+}
+/*编辑评论区*/
+.speak{
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  left:0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /*border-top: 2rpx solid rgb(99, 97, 97);*/
+}
+.speak image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.heart{
+  margin-right: 14%;
+  margin-left: 8%;
+}
+.text{
+  display: inline-block;
+  width: 60%;
+  background-color:  rgb(231, 226, 227);
+  padding:1%;
+  margin:26rpx 0;
+  font-size: 28rpx;
+}
+/*发送框的样式*/
+.end{
+  display: block;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 9999;
+}
+.end input{
+  width: 90%;
+  height: 80rpx;
+  margin: 20rpx; 
+  background-color:rgb(231, 226, 227) ;
+  padding-left: 2%;
+}
+/*遮罩层*/
+.mask{
+  width: 100%;
+  height: 100%;
+  top:0;
+  position: fixed;
+  background-color: darkslategrey;
+  opacity: 0.5;
+}
+/*显示点赞区的用户头像*/
+.commentHeart{
+  margin: 30rpx;
+}
+.commentHeart image{
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+  margin-right:30rpx;
+}

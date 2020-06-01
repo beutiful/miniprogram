@@ -1,0 +1,51 @@
+{
+  "pages": [
+
+    "pages/index/index",
+    "pages/main/main",
+    "pages/loose/Loose",
+    "pages/school/school",
+    "pages/school/childSc/Sdetail",
+    "pages/news/news",
+    "pages/profile/useredit/useredit",
+    "pages/litter-img/edit/edit",
+    "pages/litter-img/message/message",
+    "pages/experience/experience",
+    "pages/experience/desexperience/deseperience",
+    "pages/devote/devote",
+    "pages/book/book",
+    "pages/book/desbook/desbook",
+    "pages/devote/desdevote/desdevote",
+    "pages/loose/desloose/desloose",
+    "pages/news/desnews/desnews",
+    "pages/profile/profile",
+    "pages/search/search",
+    "pages/profile/desmyedit/desmyedit",
+    "pages/imgdetail/imgdetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "text": "首页",
+        "iconPath": "/assets/tabbar/home.png",
+        "selectedIconPath": "/assets/tabbar/home-active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "/assets/tabbar/my.png",
+        "selectedIconPath": "/assets/tabbar/my-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
